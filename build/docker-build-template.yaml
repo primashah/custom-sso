@@ -64,7 +64,7 @@ parameters:
   value: custom-sso
 - description: Git source URI for application
   name: SOURCE_REPOSITORY_URL
-  value: "https://github.com/justindav1s/custom-sso.git"
+  value: "https://github.com/primashah/custom-sso.git"
   required: true
 - description: Git branch/tag reference
   name: SOURCE_REPOSITORY_REF
