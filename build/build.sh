@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-export IP=ocp.datr.eu
+export IP=192.168.99.100
 export APP=custom-sso
 export PROJECT=$APP-build
 
@@ -20,7 +20,7 @@ oc delete all -l app=$APP
 
 oc new-app -f docker-build-template.yaml \
     -p APPLICATION_NAME=custom-sso \
-    -p SOURCE_REPOSITORY_URL="https://github.com/justindav1s/custom-sso.git" \
+    -p SOURCE_REPOSITORY_URL="https://github.com/primashah/custom-sso.git" \
     -p SOURCE_REPOSITORY_REF="master" \
     -p DOCKERFILE_PATH="build" \
     -p DOCKERFILE_NAME="Dockerfile"
