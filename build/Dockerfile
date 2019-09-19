@@ -1,4 +1,4 @@
-FROM jboss/keycloak
+FROM docker-registry.default.svc:5000/openshift/redhat-sso73-openshift:latest
 
 USER root
 
