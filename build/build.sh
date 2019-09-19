@@ -4,7 +4,7 @@ export IP=192.168.99.100
 export APP=custom-sso
 export PROJECT=$APP-build
 
-oc login https://${IP}:8443 -u admin
+oc login https://${IP}:8443 -u system -p admin
 
 oc delete project $PROJECT
 oc new-project $PROJECT 2> /dev/null
