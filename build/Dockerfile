@@ -1,4 +1,4 @@
-FROM myproject/mysso
+FROM 172.30.1.1:5000/myproject/mysso
 
 USER root
 
