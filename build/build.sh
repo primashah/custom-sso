@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
-export IP=192.168.99.100
+export IP=master.na311.openshift.opentlc.com
 export APP=custom-sso
 export PROJECT=$APP-build
 
-oc login https://${IP}:8443 -u system -p admin
+oc login https://${IP}:8443 -u prshah-redhat.com -p Fleet1234
 
-oc delete project $PROJECT
+
 oc new-project $PROJECT 2> /dev/null
 while [ $? \> 0 ]; do
     sleep 1
