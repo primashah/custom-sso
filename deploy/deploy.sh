@@ -7,8 +7,7 @@ export PROJECT=$APP-build
 oc login https://${IP} -u prshah-redhat.com -p Fleet1234
 
 
-APP=custom-sso-build
-PROJECT=$APP
+
 
 oc project $PROJECT
 

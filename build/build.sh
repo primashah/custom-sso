@@ -4,7 +4,7 @@ export IP=master.na311.openshift.opentlc.com
 export APP=custom-sso
 export PROJECT=$APP-build
 
-oc login https://${IP}:8443 -u prshah-redhat.com -p Fleet1234
+oc login https://${IP} -u prshah-redhat.com -p Fleet1234
 
 
 oc new-project $PROJECT 2> /dev/null
