@@ -1,4 +1,4 @@
-FROM redhat-sso70-openshift:1.2
+FROM redhat-sso72-openshift:1.2
 
 USER root
 
