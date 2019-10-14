@@ -5,8 +5,10 @@ FROM registry.access.redhat.com/redhat-sso-7/sso72-openshift:1.2
  RUN mkdir -p /providers
 
 COPY dependencies/sms-authenticator.jar /providers
-RUN cp providers/ /opt/eap/
+RUN mkdir -p /opt/eap/providers
+RUN cp providers/ /opt/eap/providers
 RUN mkdir -p /openstandia
+
 COPY dependencies/themes/openstandia /openstandia
 
 # COPY dependencies/module.xml /opt/eap/modules/system/layers/openshift/com/oracle/main
