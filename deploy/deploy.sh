@@ -40,3 +40,14 @@ oc new-app -f ./sso73-https.json \
  -p SSO_TRUSTSTORE="keystore.jks" \
  -p SSO_TRUSTSTORE_PASSWORD="changeme" \
  -p SSO_TRUSTSTORE_SECRET="sso-app-secret"        
+
+
+ ----
+ oc policy add-role-to-user view system:serviceaccount:${PROJECT}:default
+
+ oc new-app -f ./sso73-https.json \
+-p SSO_ADMIN_USERNAME="admin" \
+ -p SSO_ADMIN_PASSWORD="admin" \
+ -p SSO_REALM="demorealm" \
+ 
+ 

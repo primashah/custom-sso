@@ -4,6 +4,7 @@ FROM registry.access.redhat.com/redhat-sso-7/sso72-openshift:1.2
 
  RUN mkdir -p /providers
 
+COPY dependencies/sms-authenticator.jar /providers
 # COPY dependencies/module.xml /opt/eap/modules/system/layers/openshift/com/oracle/main
 
 # COPY dependencies/ojdbc8.jar /opt/eap/modules/system/layers/openshift/com/oracle/main
@@ -20,6 +21,6 @@ FROM registry.access.redhat.com/redhat-sso-7/sso72-openshift:1.2
 
 # COPY dependencies/openshift-common.sh /opt/eap/bin/launch/openshift-common.sh
 
-# RUN chmod 755 /opt/eap/bin/launch/openshift-common.sh
+ RUN chmod 755 /opt/eap/bin/launch/openshift-common.sh
 
  USER 1001
