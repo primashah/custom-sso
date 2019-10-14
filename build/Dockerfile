@@ -6,7 +6,7 @@ FROM registry.access.redhat.com/redhat-sso-7/sso72-openshift:1.2
 
 #COPY dependencies/sms-authenticator.jar /providers
 RUN mkdir -p /opt/eap/providers
-RUN cp dependencies/sms-authenticator.jar  /opt/eap/providers
+COPY dependencies/sms-authenticator.jar  /opt/eap/providers
 RUN mkdir -p /openstandia
 
 COPY dependencies/themes/openstandia /openstandia
